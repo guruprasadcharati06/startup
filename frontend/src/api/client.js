@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getAnyAuthToken } from '../utils/storage.js';
 
 const apiClient = axios.create({
-  baseURL: process.env.API_BASE_URL || 'http://localhost:5000',
+  baseURL: process.env.API_BASE_URL || 'https://startup-backend-e65k.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
