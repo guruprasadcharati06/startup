@@ -3,4 +3,4 @@ services:
     name: your-site-name
     env: static
     buildCommand: npm install && npm run build
-    staticPublishPath: "./build"
+    staticPublishPath: "./dist"
