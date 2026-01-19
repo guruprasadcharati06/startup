@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply font-body bg-slate-950 text-slate-100 antialiased;
+}
+
+::selection {
+  background-color: theme('colors.accent');
+  color: #0f172a;
+}
