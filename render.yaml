@@ -17,10 +17,6 @@ services:
         sync: false # Connect this securely in the Render Dashboard
       - key: JWT_SECRET
         generateValue: true
-      - key: RAZORPAY_KEY_ID
-        sync: false # Set in Render Dashboard
-      - key: RAZORPAY_KEY_SECRET
-        sync: false # Set in Render Dashboard
 
   # --- Frontend Static Site ---
   - type: web
@@ -36,8 +32,6 @@ services:
           type: web
           name: local-services-backend
           envVarKey: RENDER_EXTERNAL_URL
-      - key: RAZORPAY_KEY_ID
-        sync: false # Set in Render Dashboard to same key as backend
     # Rewrite all traffic to index.html for React Router to work properly
     routes:
       - type: rewrite
