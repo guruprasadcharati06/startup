@@ -1,3 +1,4 @@
+# Initializing Render Blueprint Configuration
 services:
   # --- Backend Web Service ---
   - type: web
