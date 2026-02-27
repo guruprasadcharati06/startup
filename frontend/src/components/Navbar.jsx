@@ -99,7 +99,7 @@ const Navbar = () => {
             onClick={() => navigate('/meals')}
             className="hidden rounded-full border border-teal-400/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-teal-200 transition hover:border-teal-300 hover:text-teal-100 lg:inline-flex"
           >
-            Click me to explore meals &rarr;
+            Explore Meals
           </button>
           <button
             type="button"
@@ -160,7 +160,7 @@ const Navbar = () => {
                     }`
                   }
                 >
-                  Click me to explore meals &rarr;
+                  Explore Meals
                 </NavLink>
               </nav>
             </motion.div>
