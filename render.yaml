@@ -4,7 +4,7 @@ services:
   - type: web
     name: local-services-backend
     env: node
-    plan: starter # Changed from free to unblock SMTP ports
+    plan: free # Change this to starter/pro if needed
     region: singapore # Change based on your target users
     rootDir: backend
     buildCommand: npm install

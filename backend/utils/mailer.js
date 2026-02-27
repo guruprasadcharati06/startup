@@ -1,66 +1,40 @@
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 
-let transporter;
-
-const getTransporter = () => {
-  if (transporter) {
-    return transporter;
+const getSgClient = () => {
+  const apiKey = process.env.SENDGRID_API_KEY;
+  if (!apiKey) {
+    throw new Error('SENDGRID_API_KEY is not configured');
   }
 
-  let { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM } = process.env;
-
-  // Normalize/trimming to avoid accidental whitespace in env values
-  SMTP_HOST = SMTP_HOST && SMTP_HOST.trim();
-  SMTP_PORT = SMTP_PORT && SMTP_PORT.toString().trim();
-  SMTP_USER = SMTP_USER && SMTP_USER.trim();
-  SMTP_PASS = SMTP_PASS && SMTP_PASS.trim();
-  SMTP_FROM = SMTP_FROM && SMTP_FROM.trim();
-
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-    throw new Error('SMTP configuration is incomplete');
-  }
-
-  const portNum = Number(SMTP_PORT) || 587;
-  const secure = portNum === 465; // secure for SMTPS
-
-  transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: portNum,
-    secure,
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASS,
-    },
-    tls: {
-      // Allow self-signed certs if necessary; safe for development
-      rejectUnauthorized: process.env.NODE_ENV === 'production',
-    },
-  });
-
-  return transporter;
+  sgMail.setApiKey(apiKey);
+  return sgMail;
 };
 
 export const sendEmail = async ({ to, subject, text, html }) => {
-  const transport = getTransporter();
+  const mail = getSgClient();
 
   try {
-    await transport.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+    const msg = {
       to,
+      from: process.env.SMTP_FROM || 'HomeBite Security <noreply@homebite.com>',
       subject,
       text,
       html,
-    });
+    };
+
+    await mail.send(msg);
   } catch (error) {
-    // Log detailed error server-side for debugging (do not leak to clients in production)
     console.error('Email send failed:', error && error.message ? error.message : error);
+
+    if (error.response) {
+      console.error(error.response.body);
+    }
 
     const err = new Error(
       process.env.NODE_ENV === 'development'
         ? `Email send failed: ${error && error.message ? error.message : 'unknown error'}`
         : 'Email dispatch failure'
     );
-    // Attach original for further inspection if needed
     err.original = error;
     throw err;
   }
