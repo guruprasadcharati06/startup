@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import Input from '../../components/Input.jsx';
 import Button from '../../components/Button.jsx';
 import { decodeTokenPayload } from '../utils/tokenHelpers.js';
+import apiClient from '../../api/client.js';
 
 const AdminLogin = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -31,19 +32,8 @@ const AdminLogin = () => {
       setSubmitting(true);
 
       try {
-        const response = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(credentials),
-        });
-
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result?.message || 'Login failed');
-        }
+        const response = await apiClient.post('/api/auth/login', credentials);
+        const result = response.data;
 
         if (result?.data?.requiresOtp && result?.data?.userId) {
           setPendingUserId(result.data.userId);
@@ -67,20 +57,12 @@ const AdminLogin = () => {
       setSubmitting(true);
 
       try {
-        const response = await fetch('/api/auth/verify-otp', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ userId: pendingUserId, otp: otp.trim() }),
+        const response = await apiClient.post('/api/auth/verify-otp', {
+          userId: pendingUserId,
+          otp: otp.trim(),
         });
 
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result?.message || 'OTP verification failed');
-        }
-
+        const result = response.data;
         const token = result?.data?.token;
 
         if (!token) {
@@ -109,16 +91,13 @@ const AdminLogin = () => {
     if (!pendingUserId) return;
 
     try {
-      await fetch('/api/auth/resend-otp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId: pendingUserId, purpose: 'login' }),
+      await apiClient.post('/api/auth/resend-otp', {
+        userId: pendingUserId,
+        purpose: 'login',
       });
       toast.success('OTP resent to the registered email.');
     } catch (error) {
-      toast.error('Failed to resend OTP. Please wait a moment and try again.');
+      toast.error(error.message || 'Failed to resend OTP. Please wait a moment and try again.');
     }
   };
 
