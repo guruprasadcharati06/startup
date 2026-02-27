@@ -19,9 +19,18 @@ const getResendClient = () => {
 export const sendEmail = async ({ to, subject, text, html }) => {
   const resend = getResendClient();
 
+  // Clean up any hidden spaces from the environment variable just in case
+  let fromAddress = process.env.SMTP_FROM ? process.env.SMTP_FROM.trim() : null;
+
+  // Resend free tier strictly requires sending FROM onboarding@resend.dev
+  // If the user hasn't verified a custom domain, force it to the safe default
+  if (!fromAddress || fromAddress.includes('gmail.com')) {
+    fromAddress = 'HomeBite Security <onboarding@resend.dev>';
+  }
+
   try {
     const { data, error } = await resend.emails.send({
-      from: process.env.SMTP_FROM || 'HomeBite Security <onboarding@resend.dev>',
+      from: fromAddress,
       to,
       subject,
       text,
