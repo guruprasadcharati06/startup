@@ -599,7 +599,7 @@ const Home = ({
                   onClick={handleExploreMeals}
                   className="relative z-10 touch-manipulation cursor-pointer rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-20px_rgba(16,185,129,0.75)]"
                 >
-                  Explore Meals
+                  Click me to explore meals
                 </button>
                 <button
                   type="button"
