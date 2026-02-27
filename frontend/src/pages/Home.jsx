@@ -597,7 +597,7 @@ const Home = ({
                 <button
                   type="button"
                   onClick={handleExploreMeals}
-                  className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-20px_rgba(16,185,129,0.75)]"
+                  className="relative z-10 touch-manipulation cursor-pointer rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-20px_rgba(16,185,129,0.75)]"
                 >
                   Explore Meals
                 </button>
@@ -856,8 +856,8 @@ const Home = ({
                 type="button"
                 onClick={() => setSelectedMealType(option)}
                 className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${selectedMealType === option
-                    ? 'border-accent bg-accent/10 text-accent'
-                    : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
+                  ? 'border-accent bg-accent/10 text-accent'
+                  : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
                   }`}
               >
                 {option === 'all' ? 'All meals' : `${option} options`}
@@ -874,8 +874,8 @@ const Home = ({
                 type="button"
                 onClick={() => setDinnerPreference(preference)}
                 className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${dinnerPreference === preference
-                    ? 'border-teal-400 bg-teal-500/10 text-teal-300'
-                    : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
+                  ? 'border-teal-400 bg-teal-500/10 text-teal-300'
+                  : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
                   }`}
               >
                 {preference === 'veg' ? 'Veg Plates' : 'Non-veg Plates'}

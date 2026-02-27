@@ -63,8 +63,7 @@ const Navbar = () => {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `text-sm font-medium uppercase tracking-wide transition-colors ${
-                  isActive ? 'text-accent' : 'text-slate-300 hover:text-white'
+                `text-sm font-medium uppercase tracking-wide transition-colors ${isActive ? 'text-accent' : 'text-slate-300 hover:text-white'
                 }`
               }
             >
@@ -142,16 +141,27 @@ const Navbar = () => {
                     to={item.to}
                     onClick={() => handleNavSelection()}
                     className={({ isActive }) =>
-                      `rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${
-                        isActive
-                          ? 'bg-teal-500/10 text-teal-200 shadow-[0_0_12px_rgba(45,212,191,0.25)]'
-                          : 'text-slate-200 hover:bg-slate-900/80 hover:text-teal-200'
+                      `rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${isActive
+                        ? 'bg-teal-500/10 text-teal-200 shadow-[0_0_12px_rgba(45,212,191,0.25)]'
+                        : 'text-slate-200 hover:bg-slate-900/80 hover:text-teal-200'
                       }`
                     }
                   >
                     {item.label}
                   </NavLink>
                 ))}
+                <NavLink
+                  to="/meals"
+                  onClick={() => handleNavSelection()}
+                  className={({ isActive }) =>
+                    `rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${isActive
+                      ? 'bg-teal-500/10 text-teal-200 shadow-[0_0_12px_rgba(45,212,191,0.25)]'
+                      : 'text-slate-200 hover:bg-slate-900/80 hover:text-teal-200'
+                    }`
+                  }
+                >
+                  Explore Meals
+                </NavLink>
               </nav>
             </motion.div>
           )}
