@@ -599,7 +599,7 @@ const Home = ({
                   onClick={handleExploreMeals}
                   className="relative z-10 touch-manipulation cursor-pointer rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-20px_rgba(16,185,129,0.75)]"
                 >
-                  Click me to explore meals &rarr;
+                  Click me to explore meals <span className="text-lg leading-none ml-1">&rarr;</span>
                 </button>
                 <button
                   type="button"
@@ -682,45 +682,7 @@ const Home = ({
             </div>
           </motion.section>
 
-          <motion.section {...baseSectionProps} className="grid gap-10 lg:grid-cols-2">
-            <div className="space-y-5">
-              <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">What we offer</span>
-              <h2 className="font-display text-3xl font-semibold text-white">Food for every mood</h2>
-              <p className="text-base text-slate-400">
-                Freshly curated meals, wholesome combos, and thoughtful specials that follow your taste and dietary
-                preferences.
-              </p>
-              <ul className="grid gap-3">
-                {offerHighlights.map((item) => (
-                  <li
-                    key={item}
-                    className="group flex items-center gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/60 px-4 py-3 text-sm text-slate-100 transition hover:border-emerald-400/40 hover:bg-emerald-500/10"
-                  >
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-200 group-hover:bg-emerald-500/25">★</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <motion.div
-              {...baseSectionProps}
-              className="rounded-3xl border border-emerald-400/10 bg-slate-900/80 p-8"
-            >
-              <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Trusted home chefs</span>
-              <h3 className="mt-3 font-display text-2xl font-semibold text-white">Cooked with care</h3>
-              <p className="mt-3 text-base text-slate-300/90">
-                All our dishes are prepared by verified home cooks who follow clean kitchen practices and quality
-                standards. Every meal is cooked with care and attention.
-              </p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {['Clean kitchens', 'Verified chefs', 'Quality checks', 'Handmade flavours'].map((badge) => (
-                  <div key={badge} className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 px-4 py-3 text-sm text-emerald-200">
-                    {badge}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.section>
+
 
 
 
@@ -838,6 +800,46 @@ const Home = ({
             ))}
           </div>
         )}
+      </motion.section>
+
+      <motion.section {...baseSectionProps} className="grid gap-10 lg:grid-cols-2">
+        <div className="space-y-5">
+          <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">What we offer</span>
+          <h2 className="font-display text-3xl font-semibold text-white">Food for every mood</h2>
+          <p className="text-base text-slate-400">
+            Freshly curated meals, wholesome combos, and thoughtful specials that follow your taste and dietary
+            preferences.
+          </p>
+          <ul className="grid gap-3">
+            {offerHighlights.map((item) => (
+              <li
+                key={item}
+                className="group flex items-center gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/60 px-4 py-3 text-sm text-slate-100 transition hover:border-emerald-400/40 hover:bg-emerald-500/10"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-200 group-hover:bg-emerald-500/25">★</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <motion.div
+          {...baseSectionProps}
+          className="rounded-3xl border border-emerald-400/10 bg-slate-900/80 p-8"
+        >
+          <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Trusted home chefs</span>
+          <h3 className="mt-3 font-display text-2xl font-semibold text-white">Cooked with care</h3>
+          <p className="mt-3 text-base text-slate-300/90">
+            All our dishes are prepared by verified home cooks who follow clean kitchen practices and quality
+            standards. Every meal is cooked with care and attention.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {['Clean kitchens', 'Verified chefs', 'Quality checks', 'Handmade flavours'].map((badge) => (
+              <div key={badge} className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 px-4 py-3 text-sm text-emerald-200">
+                {badge}
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </motion.section>
 
       <motion.section {...baseSectionProps} className="grid gap-10 rounded-4xl border border-emerald-400/10 bg-slate-900/70 p-10 lg:grid-cols-[1.1fr,0.9fr]">
