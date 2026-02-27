@@ -722,29 +722,6 @@ const Home = ({
             </motion.div>
           </motion.section>
 
-          <motion.section id="how-it-works" {...baseSectionProps} className="space-y-6">
-            <div className="flex flex-col gap-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">How it works</span>
-              <h2 className="font-display text-3xl font-semibold text-white">Dinner plans made easy</h2>
-              <p className="max-w-3xl text-base text-slate-300/95">
-                From the moment you tap order to the time your meal arrives, we keep things clear, quick, and delicious.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {howItWorksSteps.map((step, index) => (
-                <motion.div
-                  key={step}
-                  {...baseSectionProps}
-                  transition={{ duration: 0.35, delay: index * 0.07, ease: 'easeOut' }}
-                  className="flex flex-col gap-3 rounded-2xl border border-slate-800/70 bg-slate-900/70 px-5 py-6"
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">Step {index + 1}</span>
-                  <p className="text-sm text-slate-200/90">{step}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-
           <motion.section {...baseSectionProps} className="grid gap-10 rounded-4xl border border-emerald-400/10 bg-slate-900/70 p-10 lg:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-5">
               <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Why choose us</span>
@@ -791,24 +768,6 @@ const Home = ({
                 ))}
               </div>
             </motion.div>
-          </motion.section>
-
-          <motion.section {...baseSectionProps} className="space-y-6">
-            <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Our promise</span>
-            <h2 className="font-display text-3xl font-semibold text-white">Every bite feels like home</h2>
-            <p className="max-w-3xl text-base text-slate-300/90">
-              Fresh ingredients, mindful cooking, and heartfelt service — that&apos;s our everyday commitment.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {promisePillars.map((pillar) => (
-                <span
-                  key={pillar}
-                  className="rounded-full border border-emerald-400/20 bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200"
-                >
-                  {pillar}
-                </span>
-              ))}
-            </div>
           </motion.section>
 
           <motion.section
@@ -925,6 +884,47 @@ const Home = ({
             ))}
           </div>
         )}
+      </motion.section>
+
+      <motion.section id="how-it-works" {...baseSectionProps} className="space-y-6">
+        <div className="flex flex-col gap-2">
+          <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">How it works</span>
+          <h2 className="font-display text-3xl font-semibold text-white">Dinner plans made easy</h2>
+          <p className="max-w-3xl text-base text-slate-300/95">
+            From the moment you tap order to the time your meal arrives, we keep things clear, quick, and delicious.
+          </p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {howItWorksSteps.map((step, index) => (
+            <motion.div
+              key={step}
+              {...baseSectionProps}
+              transition={{ duration: 0.35, delay: index * 0.07, ease: 'easeOut' }}
+              className="flex flex-col gap-3 rounded-2xl border border-slate-800/70 bg-slate-900/70 px-5 py-6"
+            >
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">Step {index + 1}</span>
+              <p className="text-sm text-slate-200/90">{step}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section {...baseSectionProps} className="space-y-6">
+        <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Our promise</span>
+        <h2 className="font-display text-3xl font-semibold text-white">Every bite feels like home</h2>
+        <p className="max-w-3xl text-base text-slate-300/90">
+          Fresh ingredients, mindful cooking, and heartfelt service — that&apos;s our everyday commitment.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {promisePillars.map((pillar) => (
+            <span
+              key={pillar}
+              className="rounded-full border border-emerald-400/20 bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200"
+            >
+              {pillar}
+            </span>
+          ))}
+        </div>
       </motion.section>
 
       {showLanding && (
