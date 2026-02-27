@@ -37,13 +37,13 @@ const WeeklySubscription = () => {
         highlight: 'Chef-curated breakfast rotation every morning',
       },
       lunch: {
-        priceLabel: '₹1,000',
+        priceLabel: '₹700',
         priceCaption: 'Weekly plan',
         description: 'Fresh veg thali delivered every day with changing mains and sides.',
         highlight: 'Daily homestyle thali with rotating sabzi, dal, and accompaniments',
       },
       dinner: {
-        priceLabel: '₹1,000',
+        priceLabel: '₹800',
         priceCaption: 'Weekly plan',
         description: 'Comforting dinner thali each night with chef-selected dishes.',
         highlight: 'Evening thali service with daily menu variations',
@@ -204,11 +204,10 @@ const WeeklySubscription = () => {
                   key={option.value}
                   type="button"
                   onClick={() => setForm((prev) => ({ ...prev, dietType: option.value }))}
-                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
-                    form.dietType === option.value
+                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${form.dietType === option.value
                       ? 'border-emerald-400 bg-emerald-500/10 text-emerald-200 shadow-lg shadow-emerald-500/10'
                       : 'border-slate-700 text-slate-300 hover:border-emerald-400 hover:text-emerald-200'
-                  }`}
+                    }`}
                 >
                   {option.label}
                 </button>
@@ -236,11 +235,10 @@ const WeeklySubscription = () => {
                   key={option.value}
                   type="button"
                   onClick={() => setForm((prev) => ({ ...prev, spiceLevel: option.value }))}
-                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
-                    form.spiceLevel === option.value
+                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${form.spiceLevel === option.value
                       ? 'border-orange-400 bg-orange-500/10 text-orange-200 shadow-lg shadow-orange-500/10'
                       : 'border-slate-700 text-slate-300 hover:border-orange-400 hover:text-orange-200'
-                  }`}
+                    }`}
                 >
                   {option.label}
                 </button>
@@ -260,11 +258,10 @@ const WeeklySubscription = () => {
                   key={option.value}
                   type="button"
                   onClick={() => setForm((prev) => ({ ...prev, deliveryTime: option.value }))}
-                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
-                    form.deliveryTime === option.value
+                  className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${form.deliveryTime === option.value
                       ? 'border-indigo-400 bg-indigo-500/10 text-indigo-200 shadow-lg shadow-indigo-500/10'
                       : 'border-slate-700 text-slate-300 hover:border-indigo-400 hover:text-indigo-200'
-                  }`}
+                    }`}
                 >
                   {option.label}
                 </button>
