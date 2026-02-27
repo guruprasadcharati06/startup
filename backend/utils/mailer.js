@@ -19,14 +19,9 @@ const getResendClient = () => {
 export const sendEmail = async ({ to, subject, text, html }) => {
   const resend = getResendClient();
 
-  // Clean up any hidden spaces from the environment variable just in case
-  let fromAddress = process.env.SMTP_FROM ? process.env.SMTP_FROM.trim() : null;
-
-  // Resend free tier strictly requires sending FROM onboarding@resend.dev
-  // If the user hasn't verified a custom domain, force it to the safe default
-  if (!fromAddress || fromAddress.includes('gmail.com')) {
-    fromAddress = 'onboarding@resend.dev';
-  }
+  // HARDCODE for Resend free tier, completely ignore user's environment variables
+  // to prevent any invalid formatting crashes.
+  const fromAddress = 'onboarding@resend.dev';
 
   try {
     const { data, error } = await resend.emails.send({
