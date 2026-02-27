@@ -599,7 +599,7 @@ const Home = ({
                   onClick={handleExploreMeals}
                   className="relative z-10 touch-manipulation cursor-pointer rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-900 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-20px_rgba(16,185,129,0.75)]"
                 >
-                  Click me to explore meals
+                  Click me to explore meals &rarr;
                 </button>
                 <button
                   type="button"
@@ -722,53 +722,7 @@ const Home = ({
             </motion.div>
           </motion.section>
 
-          <motion.section {...baseSectionProps} className="grid gap-10 rounded-4xl border border-emerald-400/10 bg-slate-900/70 p-10 lg:grid-cols-[1.1fr,0.9fr]">
-            <div className="space-y-5">
-              <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Why choose us</span>
-              <h2 className="font-display text-3xl font-semibold text-white">Made for everyday comfort</h2>
-              <p className="text-base text-slate-300/90">
-                Thousands of customers trust us because our food tastes like home and arrives right when you need it.
-              </p>
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {whyChooseUs.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/60 px-4 py-3 text-sm text-slate-100"
-                  >
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-200">
-                      ✓
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <motion.div
-              {...baseSectionProps}
-              className="flex flex-col justify-between space-y-4 rounded-3xl border border-emerald-400/20 bg-slate-900/60 p-8 text-slate-200"
-            >
-              <div>
-                <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Customer happiness</span>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-white">Meals loved by thousands</h3>
-                <p className="mt-3 text-sm text-slate-300/90">
-                  Thousands of customers trust us for their daily meals because we serve food that tastes like home.
-                </p>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  { label: 'Happy diners', value: '10+' },
-                  { label: 'Meals served', value: '10+' },
-                  { label: 'City coverage', value: '1' },
-                  { label: 'Chef partners', value: '5+' },
-                ].map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-emerald-400/15 bg-slate-900/50 px-4 py-4 text-center">
-                    <p className="text-2xl font-semibold text-white">{stat.value}</p>
-                    <p className="text-xs uppercase tracking-[0.25em] text-emerald-300">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.section>
+
 
           <motion.section
             {...baseSectionProps}
@@ -884,6 +838,54 @@ const Home = ({
             ))}
           </div>
         )}
+      </motion.section>
+
+      <motion.section {...baseSectionProps} className="grid gap-10 rounded-4xl border border-emerald-400/10 bg-slate-900/70 p-10 lg:grid-cols-[1.1fr,0.9fr]">
+        <div className="space-y-5">
+          <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Why choose us</span>
+          <h2 className="font-display text-3xl font-semibold text-white">Made for everyday comfort</h2>
+          <p className="text-base text-slate-300/90">
+            Thousands of customers trust us because our food tastes like home and arrives right when you need it.
+          </p>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {whyChooseUs.map((item) => (
+              <li
+                key={item}
+                className="flex items-center gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/60 px-4 py-3 text-sm text-slate-100"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-200">
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <motion.div
+          {...baseSectionProps}
+          className="flex flex-col justify-between space-y-4 rounded-3xl border border-emerald-400/20 bg-slate-900/60 p-8 text-slate-200"
+        >
+          <div>
+            <span className="text-xs uppercase tracking-[0.3em] text-emerald-300">Customer happiness</span>
+            <h3 className="mt-3 font-display text-2xl font-semibold text-white">Meals loved by thousands</h3>
+            <p className="mt-3 text-sm text-slate-300/90">
+              Thousands of customers trust us for their daily meals because we serve food that tastes like home.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              { label: 'Happy diners', value: '10+' },
+              { label: 'Meals served', value: '10+' },
+              { label: 'City coverage', value: '1' },
+              { label: 'Chef partners', value: '5+' },
+            ].map((stat) => (
+              <div key={stat.label} className="rounded-2xl border border-emerald-400/15 bg-slate-900/50 px-4 py-4 text-center">
+                <p className="text-2xl font-semibold text-white">{stat.value}</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-emerald-300">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </motion.section>
 
       <motion.section id="how-it-works" {...baseSectionProps} className="space-y-6">
