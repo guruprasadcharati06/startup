@@ -25,7 +25,7 @@ export const sendEmail = async ({ to, subject, text, html }) => {
   // Resend free tier strictly requires sending FROM onboarding@resend.dev
   // If the user hasn't verified a custom domain, force it to the safe default
   if (!fromAddress || fromAddress.includes('gmail.com')) {
-    fromAddress = 'HomeBite Security <onboarding@resend.dev>';
+    fromAddress = 'onboarding@resend.dev';
   }
 
   try {
