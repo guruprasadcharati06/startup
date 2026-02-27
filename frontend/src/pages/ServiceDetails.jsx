@@ -23,7 +23,6 @@ const ServiceDetails = () => {
 
   const handleAction = () => {
     addToCart(value);
-    toast.success(`${value.title} added to cart`);
     navigate('/cart');
   };
 

@@ -35,323 +35,323 @@ const Home = ({
 
   const curatedMealItems = useMemo(() => {
     const breakfastItems = [
-        {
-          _id: 'static-breakfast-idli-steamed',
-          title: 'Single Idli',
-          description: 'Soft, fluffy idli served with coconut chutney and a ladle of sambar.',
-          price: 20,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/idli.jpg',
-        },
-        {
-          _id: 'static-breakfast-vada-crisp',
-          title: 'Single Vada',
-          description: 'Golden lentil fritter with a crunchy crust and soft centre, paired with chutney.',
-          price: 15,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/vada.jpg',
-        },
-        {
-          _id: 'static-breakfast-masala-dosa',
-          title: 'Masala Dosa Supreme',
-          description: 'Crisp dosa filled with spiced potato palya, served with chutneys and sambar.',
-          price: 70,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/dosa.jpg',
-        },
-        {
-          _id: 'static-breakfast-puri',
-          title: 'Puri Bhaji Combo',
-          description: 'Fluffy puris paired with a mildly spiced potato bhaji and pickle.',
-          price: 75,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/puri.jpg',
-        },
-        {
-          _id: 'static-breakfast-upma',
-          title: 'Vegetable Upma Bowl',
-          description: 'Roasted semolina cooked with vegetables, curry leaves, and cashews.',
-          price: 30,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/upma.jpg',
-        },
-        {
-          _id: 'static-breakfast-avalakki',
-          title: 'Masala Avalakki',
-          description: 'Flattened rice tossed with onions, peanuts, mustard, and turmeric.',
-          price: 30,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/avalakki.jpg',
-        },
-        {
-          _id: 'static-breakfast-benne-dosa',
-          title: 'Benne Dose Splendor',
-          description: 'Mysuru-style benne dosa, golden and crisp with a luscious butter finish.',
-          price: 80,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/benne-dosa.jpg',
-        },
-        {
-          _id: 'static-breakfast-mangalore-buns',
-          title: 'Mangalore Buns Platter',
-          description: 'Sweet banana-infused buns served warm with coconut chutney and sambar.',
-          price: 50,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/mangalore-buns.webp',
-        },
-        {
-          _id: 'static-breakfast-set-dosa',
-          title: 'Soft Set Dosa Stack',
-          description: 'Fluffy set dosas accompanied by vegetable sagu and coconut chutney.',
-          price: 80,
-          category: 'Breakfast classic',
-          type: 'item',
-          mealType: 'breakfast',
-          imageUrl: '/images/breakfast/set-dosa.jpg',
-        },
-      ];
+      {
+        _id: 'static-breakfast-idli-steamed',
+        title: 'Single Idli',
+        description: 'Soft, fluffy idli served with coconut chutney and a ladle of sambar.',
+        price: 20,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/idli.jpg',
+      },
+      {
+        _id: 'static-breakfast-vada-crisp',
+        title: 'Single Vada',
+        description: 'Golden lentil fritter with a crunchy crust and soft centre, paired with chutney.',
+        price: 15,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/vada.jpg',
+      },
+      {
+        _id: 'static-breakfast-masala-dosa',
+        title: 'Masala Dosa Supreme',
+        description: 'Crisp dosa filled with spiced potato palya, served with chutneys and sambar.',
+        price: 70,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/dosa.jpg',
+      },
+      {
+        _id: 'static-breakfast-puri',
+        title: 'Puri Bhaji Combo',
+        description: 'Fluffy puris paired with a mildly spiced potato bhaji and pickle.',
+        price: 75,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/puri.jpg',
+      },
+      {
+        _id: 'static-breakfast-upma',
+        title: 'Vegetable Upma Bowl',
+        description: 'Roasted semolina cooked with vegetables, curry leaves, and cashews.',
+        price: 30,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/upma.jpg',
+      },
+      {
+        _id: 'static-breakfast-avalakki',
+        title: 'Masala Avalakki',
+        description: 'Flattened rice tossed with onions, peanuts, mustard, and turmeric.',
+        price: 30,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/avalakki.jpg',
+      },
+      {
+        _id: 'static-breakfast-benne-dosa',
+        title: 'Benne Dose Splendor',
+        description: 'Mysuru-style benne dosa, golden and crisp with a luscious butter finish.',
+        price: 80,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/benne-dosa.jpg',
+      },
+      {
+        _id: 'static-breakfast-mangalore-buns',
+        title: 'Mangalore Buns Platter',
+        description: 'Sweet banana-infused buns served warm with coconut chutney and sambar.',
+        price: 50,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/mangalore-buns.webp',
+      },
+      {
+        _id: 'static-breakfast-set-dosa',
+        title: 'Soft Set Dosa Stack',
+        description: 'Fluffy set dosas accompanied by vegetable sagu and coconut chutney.',
+        price: 80,
+        category: 'Breakfast classic',
+        type: 'item',
+        mealType: 'breakfast',
+        imageUrl: '/images/breakfast/set-dosa.jpg',
+      },
+    ];
 
     const lunchItems = [
-        {
-          _id: 'static-lunch-chapati-thali',
-          title: 'Chapati Comfort Plate',
-          description: 'Soft chapatis served with seasonal vegetable curry and a drizzle of ghee.',
-          price: 10,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/chapati.jpg',
-        },
-        {
-          _id: 'static-lunch-roti-stack',
-          title: 'Tandoori Roti Stack',
-          description: 'Hand-tossed rotis straight from the tandoor with a side of dal tadka.',
-          price: 12,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/roti.jpg',
-        },
-        {
-          _id: 'static-lunch-veg-melody',
-          title: 'Market Fresh Veggies',
-          description: 'A colourful sauté of farm vegetables tempered with mustard and curry leaves.',
-          price: 30,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/vegetables.jpg',
-        },
-        {
-          _id: 'static-lunch-curd-salad',
-          title: 'Curd & Cucumber Salad',
-          description: 'Cooling curd tossed with cucumbers, carrots, and a tempering of spices.',
-          price: 20,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/curd-salad.jpg',
-        },
-        {
-          _id: 'static-lunch-curd-bowl',
-          title: 'Earthen Pot Curd',
-          description: 'Thick, home-set curd served chilled in a traditional clay pot.',
-          price: 10,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/curd.jpg',
-        },
-        {
-          _id: 'static-lunch-masala-rice',
-          title: 'Masala Rice Bowl',
-          description: 'Fragrant spiced rice topped with roasted peanuts and crunchy papad.',
-          price: 50,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/masala-rice.jpg',
-        },
-        {
-          _id: 'static-lunch-white-rice',
-          title: 'Steamed White Rice',
-          description: 'Single-serve portion of fluffy steamed rice to pair with your favourite sides.',
-          price: 30,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/white-rice.jpg',
-        },
-        {
-          _id: 'static-lunch-sambar',
-          title: 'Homestyle Vegetable Sambar',
-          description: 'Aromatic lentil stew simmered with drumsticks, gourds, and house masala.',
-          price: 20,
-          category: 'Lunch special',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/sambar.jpg',
-        },
-        {
-          _id: 'static-lunch-jamun',
-          title: 'Gulab Jamun Duo',
-          description: 'Warm, syrupy gulab jamun made fresh by our home chefs.',
-          price: 20,
-          category: 'Lunch sweet',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/ice-cream.jpg',
-        },
-        {
-          _id: 'static-lunch-papad',
-          title: 'Roasted Papad',
-          description: 'Crisp papad toasted with a sprinkle of chaat masala.',
-          price: 10,
-          category: 'Lunch side',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/papad.jpg',
-        },
-        {
-          _id: 'static-lunch-full-thali',
-          title: 'Homestyle Full Thali',
-          description: 'Complete thali with chapati, rice, sambar, seasonal sabzi, salad, curd, and dessert.',
-          price: 180,
-          category: 'Lunch combo',
-          type: 'item',
-          mealType: 'lunch',
-          imageUrl: '/images/lunch/thalis-and-combos-by-treat-mumbai-north-indian-delivery-restaurants-kopls6wbq4.avif',
-        },
-      ];
+      {
+        _id: 'static-lunch-chapati-thali',
+        title: 'Chapati Comfort Plate',
+        description: 'Soft chapatis served with seasonal vegetable curry and a drizzle of ghee.',
+        price: 10,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/chapati.jpg',
+      },
+      {
+        _id: 'static-lunch-roti-stack',
+        title: 'Tandoori Roti Stack',
+        description: 'Hand-tossed rotis straight from the tandoor with a side of dal tadka.',
+        price: 12,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/roti.jpg',
+      },
+      {
+        _id: 'static-lunch-veg-melody',
+        title: 'Market Fresh Veggies',
+        description: 'A colourful sauté of farm vegetables tempered with mustard and curry leaves.',
+        price: 30,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/vegetables.jpg',
+      },
+      {
+        _id: 'static-lunch-curd-salad',
+        title: 'Curd & Cucumber Salad',
+        description: 'Cooling curd tossed with cucumbers, carrots, and a tempering of spices.',
+        price: 20,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/curd-salad.jpg',
+      },
+      {
+        _id: 'static-lunch-curd-bowl',
+        title: 'Earthen Pot Curd',
+        description: 'Thick, home-set curd served chilled in a traditional clay pot.',
+        price: 10,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/curd.jpg',
+      },
+      {
+        _id: 'static-lunch-masala-rice',
+        title: 'Masala Rice Bowl',
+        description: 'Fragrant spiced rice topped with roasted peanuts and crunchy papad.',
+        price: 50,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/masala-rice.jpg',
+      },
+      {
+        _id: 'static-lunch-white-rice',
+        title: 'Steamed White Rice',
+        description: 'Single-serve portion of fluffy steamed rice to pair with your favourite sides.',
+        price: 30,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/white-rice.jpg',
+      },
+      {
+        _id: 'static-lunch-sambar',
+        title: 'Homestyle Vegetable Sambar',
+        description: 'Aromatic lentil stew simmered with drumsticks, gourds, and house masala.',
+        price: 20,
+        category: 'Lunch special',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/sambar.jpg',
+      },
+      {
+        _id: 'static-lunch-jamun',
+        title: 'Gulab Jamun Duo',
+        description: 'Warm, syrupy gulab jamun made fresh by our home chefs.',
+        price: 20,
+        category: 'Lunch sweet',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/ice-cream.jpg',
+      },
+      {
+        _id: 'static-lunch-papad',
+        title: 'Roasted Papad',
+        description: 'Crisp papad toasted with a sprinkle of chaat masala.',
+        price: 10,
+        category: 'Lunch side',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/papad.jpg',
+      },
+      {
+        _id: 'static-lunch-full-thali',
+        title: 'Homestyle Full Thali',
+        description: 'Complete thali with chapati, rice, sambar, seasonal sabzi, salad, curd, and dessert.',
+        price: 180,
+        category: 'Lunch combo',
+        type: 'item',
+        mealType: 'lunch',
+        imageUrl: '/images/lunch/thalis-and-combos-by-treat-mumbai-north-indian-delivery-restaurants-kopls6wbq4.avif',
+      },
+    ];
 
     const dinnerItems = [
-        {
-          _id: 'static-dinner-chapati-platter',
-          title: 'Chapati Evening Platter',
-          description: 'Soft chapatis with rich vegetable curry and slow-simmered dal for dinner.',
-          price: 10,
-          category: 'Dinner special',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/chapati.jpg',
-        },
-        {
-          _id: 'static-dinner-roti-basket',
-          title: 'Butter Roti Basket',
-          description: 'Tandoor rotis brushed with ghee, served alongside dal makhani.',
-          price: 12,
-          category: 'Dinner special',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/roti.jpg',
-        },
-        {
-          _id: 'static-dinner-veg-thali',
-          title: 'Evening Veg Thali',
-          description: 'Full thali spread with chapati, rice, sabzi, sambar, salad, curd, and dessert.',
-          price: 220,
-          category: 'Dinner combo',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/lunch/thalis-and-combos-by-treat-mumbai-north-indian-delivery-restaurants-kopls6wbq4.avif',
-        },
-        {
-          _id: 'static-dinner-masala-rice',
-          title: 'Masala Rice Pot',
-          description: 'Fragrant masala rice loaded with vegetables and crispy toppings.',
-          price: 50,
-          category: 'Dinner special',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/masala-rice.jpg',
-        },
-        {
-          _id: 'static-dinner-veg-medley',
-          title: 'Stir-Fried Veg Medley',
-          description: 'Seasonal vegetables tossed with mustard seeds, curry leaves, and coconut.',
-          price: 30,
-          category: 'Dinner special',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/vegetables.jpg',
-        },
-        {
-          _id: 'static-dinner-curd-salad',
-          title: 'Dinner Curd Salad',
-          description: 'Cooling curd, cucumber, and carrot salad with a tempered seasoning.',
-          price: 20,
-          category: 'Dinner side',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/curd-salad.jpg',
-        },
-        {
-          _id: 'static-dinner-curd-bowl',
-          title: 'Earthen Curd Bowl',
-          description: 'Thick, home-set curd chilled in a clay pot for a soothing finish.',
-          price: 10,
-          category: 'Dinner side',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/curd.jpg',
-        },
-        {
-          _id: 'static-dinner-white-rice',
-          title: 'Steamed Rice Bowl',
-          description: 'Single-serve portion of fluffy steamed rice for pairing with curries.',
-          price: 30,
-          category: 'Dinner side',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/white-rice.jpg',
-        },
-        {
-          _id: 'static-dinner-papad',
-          title: 'Roasted Papad',
-          description: 'Papad roasted crisp with a sprinkle of chaat masala.',
-          price: 10,
-          category: 'Dinner side',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/papad.jpg',
-        },
-        {
-          _id: 'static-dinner-sambar',
-          title: 'Slow-Simmered Sambar',
-          description: 'Aromatic lentil stew simmered with garden vegetables and house masala.',
-          price: 20,
-          category: 'Dinner side',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/sambar.jpg',
-        },
-        {
-          _id: 'static-dinner-dessert',
-          title: 'Saffron Kulfi Slice',
-          description: 'Silky kulfi-style dessert infused with saffron and pistachio.',
-          price: 20,
-          category: 'Dinner sweet',
-          type: 'item',
-          mealType: 'dinner',
-          imageUrl: '/images/dinner/ice-cream.jpg',
-        },
-      ];
+      {
+        _id: 'static-dinner-chapati-platter',
+        title: 'Chapati Evening Platter',
+        description: 'Soft chapatis with rich vegetable curry and slow-simmered dal for dinner.',
+        price: 10,
+        category: 'Dinner special',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/chapati.jpg',
+      },
+      {
+        _id: 'static-dinner-roti-basket',
+        title: 'Butter Roti Basket',
+        description: 'Tandoor rotis brushed with ghee, served alongside dal makhani.',
+        price: 12,
+        category: 'Dinner special',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/roti.jpg',
+      },
+      {
+        _id: 'static-dinner-veg-thali',
+        title: 'Evening Veg Thali',
+        description: 'Full thali spread with chapati, rice, sabzi, sambar, salad, curd, and dessert.',
+        price: 220,
+        category: 'Dinner combo',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/lunch/thalis-and-combos-by-treat-mumbai-north-indian-delivery-restaurants-kopls6wbq4.avif',
+      },
+      {
+        _id: 'static-dinner-masala-rice',
+        title: 'Masala Rice Pot',
+        description: 'Fragrant masala rice loaded with vegetables and crispy toppings.',
+        price: 50,
+        category: 'Dinner special',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/masala-rice.jpg',
+      },
+      {
+        _id: 'static-dinner-veg-medley',
+        title: 'Stir-Fried Veg Medley',
+        description: 'Seasonal vegetables tossed with mustard seeds, curry leaves, and coconut.',
+        price: 30,
+        category: 'Dinner special',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/vegetables.jpg',
+      },
+      {
+        _id: 'static-dinner-curd-salad',
+        title: 'Dinner Curd Salad',
+        description: 'Cooling curd, cucumber, and carrot salad with a tempered seasoning.',
+        price: 20,
+        category: 'Dinner side',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/curd-salad.jpg',
+      },
+      {
+        _id: 'static-dinner-curd-bowl',
+        title: 'Earthen Curd Bowl',
+        description: 'Thick, home-set curd chilled in a clay pot for a soothing finish.',
+        price: 10,
+        category: 'Dinner side',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/curd.jpg',
+      },
+      {
+        _id: 'static-dinner-white-rice',
+        title: 'Steamed Rice Bowl',
+        description: 'Single-serve portion of fluffy steamed rice for pairing with curries.',
+        price: 30,
+        category: 'Dinner side',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/white-rice.jpg',
+      },
+      {
+        _id: 'static-dinner-papad',
+        title: 'Roasted Papad',
+        description: 'Papad roasted crisp with a sprinkle of chaat masala.',
+        price: 10,
+        category: 'Dinner side',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/papad.jpg',
+      },
+      {
+        _id: 'static-dinner-sambar',
+        title: 'Slow-Simmered Sambar',
+        description: 'Aromatic lentil stew simmered with garden vegetables and house masala.',
+        price: 20,
+        category: 'Dinner side',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/sambar.jpg',
+      },
+      {
+        _id: 'static-dinner-dessert',
+        title: 'Saffron Kulfi Slice',
+        description: 'Silky kulfi-style dessert infused with saffron and pistachio.',
+        price: 20,
+        category: 'Dinner sweet',
+        type: 'item',
+        mealType: 'dinner',
+        imageUrl: '/images/dinner/ice-cream.jpg',
+      },
+    ];
 
     return {
       breakfast: breakfastItems,
@@ -553,7 +553,6 @@ const Home = ({
 
   const handleAction = (item) => {
     addToCart(item);
-    toast.success(`${item.title} added to cart`);
   };
 
   const handleExploreMeals = () => {
@@ -856,11 +855,10 @@ const Home = ({
                 key={option}
                 type="button"
                 onClick={() => setSelectedMealType(option)}
-                className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${
-                  selectedMealType === option
+                className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${selectedMealType === option
                     ? 'border-accent bg-accent/10 text-accent'
                     : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
-                }`}
+                  }`}
               >
                 {option === 'all' ? 'All meals' : `${option} options`}
               </button>
@@ -875,11 +873,10 @@ const Home = ({
                 key={preference}
                 type="button"
                 onClick={() => setDinnerPreference(preference)}
-                className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${
-                  dinnerPreference === preference
+                className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${dinnerPreference === preference
                     ? 'border-teal-400 bg-teal-500/10 text-teal-300'
                     : 'border-slate-700 text-slate-400 hover:border-teal-500 hover:text-teal-300'
-                }`}
+                  }`}
               >
                 {preference === 'veg' ? 'Veg Plates' : 'Non-veg Plates'}
               </button>
@@ -940,10 +937,10 @@ const Home = ({
             </p>
             <div className="space-y-3 text-sm text-slate-200/90">
               <p>
-                <span className="font-semibold text-emerald-200">Email:</span> support@yourapp.com
+                <span className="font-semibold text-emerald-200">Email:</span> guruprasadcharati2@gmail.com
               </p>
               <p>
-                <span className="font-semibold text-emerald-200">Phone:</span> +91-XXXXXXXXXX
+                <span className="font-semibold text-emerald-200">Phone:</span> +91-8105034906
               </p>
             </div>
           </div>
@@ -960,6 +957,7 @@ const Home = ({
                 <button
                   key={network}
                   type="button"
+                  onClick={() => toast('Coming soon!', { icon: '🚧' })}
                   className="rounded-full border border-emerald-400/20 px-5 py-2 text-xs font-semibold uppercase tracking-wide text-emerald-200 transition hover:border-emerald-300 hover:text-emerald-100"
                 >
                   {network}
@@ -1013,7 +1011,8 @@ const Home = ({
                 {['IG', 'FB', 'YT', 'X'].map((token) => (
                   <span
                     key={token}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800/70 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200"
+                    onClick={() => toast('Coming soon!', { icon: '🚧' })}
+                    className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-800/70 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200 hover:bg-slate-700/70 transition"
                   >
                     {token}
                   </span>

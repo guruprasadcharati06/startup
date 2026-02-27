@@ -18,10 +18,8 @@ const reducer = (state, action) => {
             ? { ...item, quantity: (item.quantity || 1) + 1 }
             : item
         );
-        toast.success(`Updated ${action.payload.title} quantity to ${(exists.quantity || 1) + 1}`);
         return { ...state, items: updatedItems };
       }
-      toast.success('Added to cart');
       return { ...state, items: [...state.items, { ...action.payload, quantity: 1 }] };
     }
     case 'UPDATE_QUANTITY': {
@@ -33,7 +31,6 @@ const reducer = (state, action) => {
       return { ...state, items: updatedItems };
     }
     case 'REMOVE_ITEM': {
-      toast.success('Removed from cart');
       return { ...state, items: state.items.filter((item) => item._id !== action.payload) };
     }
     case 'CLEAR_CART':
@@ -46,8 +43,20 @@ const reducer = (state, action) => {
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const addToCart = (item) => dispatch({ type: 'ADD_ITEM', payload: item });
-  const removeFromCart = (id) => dispatch({ type: 'REMOVE_ITEM', payload: id });
+  const addToCart = (item) => {
+    const exists = state.items.find((i) => i._id === item._id);
+    if (exists) {
+      toast.success(`Updated ${item.title} quantity to ${(exists.quantity || 1) + 1}`);
+    } else {
+      toast.success(`${item.title} added to cart`);
+    }
+    dispatch({ type: 'ADD_ITEM', payload: item });
+  };
+
+  const removeFromCart = (id) => {
+    toast.success('Removed from cart');
+    dispatch({ type: 'REMOVE_ITEM', payload: id });
+  };
   const clearCart = () => dispatch({ type: 'CLEAR_CART' });
   const updateQuantity = (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
 
